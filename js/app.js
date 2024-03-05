@@ -65,7 +65,7 @@ submitElement.addEventListener ('click' , function() {
 
 
         outputPassengerElement.innerHTML = name + ' ' + surname;
-        outputPriceElement.innerHTML = price + ' eur';
+        outputPriceElement.innerHTML = price.toFixed(2) + ' eur';
         const code = new Uint32Array(1);
         self.crypto.getRandomValues(code);
         outputCodeElement.innerHTML = code;
@@ -73,6 +73,7 @@ submitElement.addEventListener ('click' , function() {
 
     } else {
         console.log('Inserire i dati correttamente')
+        alert('Inserire i dati correttamente')
 
     }
     
